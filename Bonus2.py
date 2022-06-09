@@ -79,8 +79,8 @@ if __name__ == "__main__":
             timedata.append(toc-tic)
         datamat.append(timedata)
         
-print(datamat)
-datamatnp=np.array(datamat)
-meantime=np.mean(datamatnp,axis=1)
-plt.plot(nums,meantime)
-plt.show()
+    print(datamat)
+    datamatnp=np.array(datamat)
+    meantime=np.mean(datamatnp,axis=1)
+    plt.plot(nums,meantime)
+    plt.show()
