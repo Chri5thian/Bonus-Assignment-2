@@ -48,12 +48,13 @@ class Graph:
             
 
 def analysis(n):
-    nums=range(5,n)
+    nums=range(5,n+1)
     datamat=[]
     for num in nums:
         timedata=[]
-        print(f"next num {num}")
+        print(f"Number of vertices 2^{num}")
         for dum in range(20):
+            print(f"Iteration {dum+1} of 20",end="\t")
             
             N=2**num
             p=20/(N-1)
@@ -85,13 +86,14 @@ if __name__ == "__main__":
     # ['B', 'C', 4],
     # ['C','D', 4],
     # ['A','C',7],
+    
     # ['A','E',12],
     # ['D','E',1]]
     
 
-    datamat, nums = analysis(14)
-    np.savetxt('datamat.csv', datamat, delimiter=',') 
-    print(datamat)
+    datamat, nums = analysis(13)
+    np.savetxt('Bonus Assignment 2\datamat.csv', datamat, delimiter=',') 
+    #print(datamat)
     datamatnp=np.array(datamat)
     meantime=np.mean(datamatnp,axis=1)
     plt.plot(nums,meantime)
