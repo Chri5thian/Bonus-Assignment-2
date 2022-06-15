@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-csv = np.genfromtxt ('Bonus Assignment 2\datamat5to13.csv', delimiter=",")
+csv = np.genfromtxt ('datamat5to13.csv', delimiter=",")
 nums=range(5,5+csv.shape[0])
 meantime=np.mean(csv,axis=1)
 plt.plot(np.power(2, nums),meantime)
